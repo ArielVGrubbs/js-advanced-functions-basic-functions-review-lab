@@ -32,22 +32,12 @@ const Calculator = {
     }
 }
 
-// function actionApplyer(int, funcArr=null){
-//     // debugger
-//     if (int == 0){
-//         debugger
-//         console.log(`testing ${int}, ${funcArr}`)
-//         return int
-//     } else {
-//         debugger
-//         funcArr.first(element => {
-//             firstResult = element(int)
-//         },
-//             funcArr.second(element => {
-//                 firstResult = element(int)
-//                 funcArr.third(element => {
-//                     firstResult = element(int)
-//                 }
-//             )})
-//         )
-// }
+let actionApplyer = function(start, ray) {
+    let a = start
+  
+    for (let i = 0; i < ray.length; i++ ){
+      a = ray[i](a)
+    }
+  
+    return a
+  }
